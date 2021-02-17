@@ -31,10 +31,6 @@ let notes = [
     }
   ]
 
-// const app = http.createServer((request, response) => {
-//     response.writeHead(200, {'Content-Type': 'application/json'})
-//     response.end(JSON.stringify(notes))
-// })
 
 const PORT = process.env.PORT || 3001
 
