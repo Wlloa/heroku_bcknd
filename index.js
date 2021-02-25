@@ -96,7 +96,13 @@ app.delete('/api/notes/:id', (request, response) =>{
 })
 
 app.put('/api/notes/:id', (req, res, next) => {
-    const note = req.body
+    const body = req.body
+
+    const note = {
+        content: body.content,
+        important: body.important
+    }
+
     Note.findByIdAndUpdate(req.params.id, note, {new:true})
     .then( updatedNote => {
         res.json(updatedNote)
